@@ -42,6 +42,8 @@ export default [
     "import/order": ["error", { "alphabetize": { "order": "asc", "caseInsensitive": true } }],
     "@stylistic/indent": ["error", 2, { "SwitchCase": 1 }],
     "@stylistic/no-trailing-spaces": "error",
+    "@stylistic/no-multiple-empty-lines": ["error", { "max": 1, "maxBOF": 0, "maxEOF": 0 }],
+    "@stylistic/padded-blocks": ["error", "never"],
     "@typescript-eslint/array-type": ["error", { "default": "generic" }],
     "@typescript-eslint/naming-convention": [
       "error",
