@@ -2,6 +2,8 @@
 
 Set of ESLint rules I use within all my JavaScript / TypeScript projects.
 
+See `RULES.md` for a complete list.
+
 ## Usage
 
 In `eslint.config.js`
