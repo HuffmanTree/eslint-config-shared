@@ -42,11 +42,11 @@ function iconFromRuleSettings(rule) {
   const level = Array.isArray(rule) ? rule[0] : rule;
   switch (level) {
     case 0:
-    case "off": return "off-icon";
+    case "off": return "🚫";
     case 1:
-    case "warn": return "warn-icon";
+    case "warn": return "🚸";
     case 2:
-    case "error": return "error-icon";
+    case "error": return "💼";
   }
 }
 
@@ -67,10 +67,14 @@ let fileContent = `# Rules
 
 > This file has been automatically generated with \`generate-rules-md.js\`. Do not edit it manually!
 
+- 🚫 : Rule level is \`off\`
+- 🚸 : Rule level is \`warn\`
+- 💼 : Rule level is \`error\`
+
 Here is the set of rules managed by this package
 
 | name | level | extra-parameters |
-| ---- | ----- | ---------------- |`;
+| ---- |:-----:| ---------------- |`;
 
 const rules = config.map(c => (c ?? {}).rules).filter(isRuleSet).reduce((previous, current) => ({ ...previous, ...current }), {})
 Object.entries(rules).forEach(([name, rule]) => {
